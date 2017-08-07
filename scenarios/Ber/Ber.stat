@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Statistics>
+
+	<Gatherer  Type="Simple"  FileName="BerSimple.txt" >
+		<RandomGenerator Type="Constant"  Value="100000" />
+		<StatisticsGenerators All="No" >
+			<StatisticsGenerator Identificator="Link1/Source->Node1" All="No"  />
+			<StatisticsGenerator Identificator="Link10/Node9->Destination" All="No"  >
+				<Name Value="DeliveredData" />
+			</StatisticsGenerator>
+		</StatisticsGenerators>
+	</Gatherer>
+	
+	<Gatherer  Type="Excel"  FileName="BerExcel.txt" >
+		<RandomGenerator Type="Constant"  Value="100000" />
+		<StatisticsGenerators All="No" >
+			<StatisticsGenerator Identificator="Link1/Source->Node1" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link2/Node1->Node2" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link3/Node2->Node3" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link4/Node3->Node4" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link5/Node4->Node5" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link6/Node5->Node6" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link7/Node6->Node7" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link8/Node7->Node8" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link9/Node8->Node9" All="No"  >
+				<Name Value="ReceivedData" />
+			</StatisticsGenerator>
+			<StatisticsGenerator Identificator="Link10/Node9->Destination" All="No"  >
+				<Name Value="ReceivedData" />
+				<Name Value="DeliveredData" />
+			</StatisticsGenerator>
+		</StatisticsGenerators>
+	</Gatherer>
+
+</Statistics>

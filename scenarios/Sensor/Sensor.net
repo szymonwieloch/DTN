@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network>
+
+	<Node Identificator="Source"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="10000" />
+			<TimeGenerator Type="Expotential" Expected="100" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Destination" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Dijkstra"/>
+	</Node>
+	
+	<Node Identificator="Node2"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Node Identificator="Node3"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Node Identificator="Node4"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Node Identificator="Node5"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Node Identificator="Node6"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Node Identificator="Destination"  >
+		<RoutingProtocol Type="Dijkstra"/>
+	</Node>
+	
+	<Node Identificator="Node8"  >
+		<RoutingProtocol Type="Dijkstra"/>
+		<BreakGenerator Type="Expotential" Expected="10" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Node>
+	
+	<Link Identificator="Link12" From="Source" To="Node2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />		
+	</Link>
+	
+	<Link Identificator="Link23" From="Node2" To="Node3" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link34" From="Node3" To="Node4" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link14" From="Source" To="Node4" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link15" From="Source" To="Node5" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link26" From="Node2" To="Node6" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link37" From="Node3" To="Destination" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link48" From="Node4" To="Node8" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link56" From="Node5" To="Node6" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link67" From="Node6" To="Destination" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link78" From="Destination" To="Node8" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link58" From="Node5" To="Node8" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+
+</Network>
+

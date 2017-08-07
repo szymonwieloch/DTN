@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network>
+
+	<Node Identificator="Source"  >
+		<DataSource>
+			<DataGenerator Type="Constant" Value="10000" />
+			<TimeGenerator Type="Expotential" Expected="100" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Destination" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Destination"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite1"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite2"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite3"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Router1"  Custodian="No" >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Router2"  Custodian="No" >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite4"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite5"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Node Identificator="Satelite6"  >
+		<RoutingProtocol Type="Predictable"  />
+	</Node>
+	
+	<Link Identificator="LinkS1" From="Source" To="Satelite1" Speed="100000" Type="Ltp"  TurnedOff="Yes" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="Constant" Value="3600" />
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+	
+	<Link Identificator="LinkS2" From="Source" To="Satelite2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="Constant" Value="3600" />
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+	
+	<Link Identificator="LinkS3" From="Source" To="Satelite3" Speed="100000" Type="Ltp" TurnedOff="Yes" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="RepeatLast" >
+			<RandomGenerator Type="Constant" Value="1800" />
+			<RandomGenerator Type="Constant" Value="3600" />
+		</TurnOnGenerator>
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+	
+	<Link Identificator="Link12" From="Satelite1" To="Satelite2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link13" From="Satelite1" To="Satelite3" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link23" From="Satelite2" To="Satelite3" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link45" From="Satelite4" To="Satelite5" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link46" From="Satelite4" To="Satelite6" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link56" From="Satelite5" To="Satelite6" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+	</Link>
+	
+	<Link Identificator="Link1R1" From="Satelite1" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link1R2" From="Satelite1" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link2R1" From="Satelite2" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link2R2" From="Satelite2" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link3R1" From="Satelite3" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link3R2" From="Satelite3" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link4R1" From="Satelite4" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link4R2" From="Satelite4" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link5R1" From="Satelite5" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link5R2" From="Satelite5" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link6R1" From="Satelite6" To="Router1" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+	<Link Identificator="Link6R2" From="Satelite6" To="Router2" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="300" />
+		<BreakGenerator Type="Expotential" Expected="20000" />
+		<RepairGenerator Type="Expotential" Expected="5000" />
+	</Link>
+	
+		<Link Identificator="LinkD4" From="Destination" To="Satelite4" Speed="100000" Type="Ltp"  TurnedOff="Yes" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="Constant" Value="3600" />
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+	
+	<Link Identificator="LinkD5" From="Destination" To="Satelite5" Speed="100000" Type="Ltp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="Constant" Value="3600" />
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+	
+	<Link Identificator="LinkD6" From="Destination" To="Satelite6" Speed="100000" Type="Ltp" TurnedOff="Yes" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<TurnOnGenerator Type="RepeatLast" >
+			<RandomGenerator Type="Constant" Value="1800" />
+			<RandomGenerator Type="Constant" Value="3600" />
+		</TurnOnGenerator>
+		<TurnOffGenerator Type="Constant" Value="1800" />
+	</Link>
+</Network>

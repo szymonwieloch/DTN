@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Statistics>	
+	<Gatherer  Type="Excel"  FileName="DelayData.txt" >
+		<RandomGenerator Type="Constant"  Value="1" />
+		<StatisticsGenerators All="No" >
+			<StatisticsGenerator Identificator="Link/Source->Destination" All="No" >
+				<Name Value="DeliveredData" />
+			</StatisticsGenerator >
+		</StatisticsGenerators>
+	</Gatherer>
+
+</Statistics>

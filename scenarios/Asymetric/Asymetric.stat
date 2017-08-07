@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Statistics>
+	
+	<Gatherer  Type="Excel"  FileName="Asymetric.txt" >
+		<RandomGenerator Type="Constant"  Value="1000000" />
+		<StatisticsGenerators All="Yes" />
+	</Gatherer>
+
+</Statistics>

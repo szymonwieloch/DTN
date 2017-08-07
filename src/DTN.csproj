@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C08A5C0C-8D2A-4B85-8237-A759518EE58A}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Dtn</RootNamespace>
+    <AssemblyName>DTN</AssemblyName>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ItemGroup>
+    <Compile Include="Data\ReceivedData.cs" />
+    <Compile Include="Network\Node\BundleBuffer.cs" />
+    <Compile Include="Network\Node\NetworkInterfaces.cs" />
+    <Compile Include="Network\Node\NetworkInterface.cs" />
+    <Compile Include="Data\Data.cs" />
+    <Compile Include="Data\DataChunk.cs" />
+    <Compile Include="Protocols\Bundle\DataBundle.cs" />
+    <Compile Include="Protocols\Bundle\ReportBundle.cs" />
+    <Compile Include="Protocols\Routing\AodvRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\AodvRReq.cs" />
+    <Compile Include="Protocols\Routing\AodvRRep.cs" />
+    <Compile Include="Protocols\Routing\DijkstraRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\DijkstraState.cs" />
+    <Compile Include="Protocols\Routing\DijkstraUpdate.cs" />
+    <Compile Include="Protocols\Routing\EpidemicRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\GradientRoutingProtocolWithRedirection.cs" />
+    <Compile Include="Protocols\Routing\GradientRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\GradientRoutingProtocolBase.cs" />
+    <Compile Include="Protocols\Routing\PredictableRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\RoutingInfo.cs" />
+    <Compile Include="Statistics\Counter.cs" />
+    <Compile Include="Test.cs" />
+    <Compile Include="TimerEntry.cs" />
+    <Compile Include="ProgressLogger.cs" />
+    <Compile Include="Network\Breakable.cs" />
+    <Compile Include="Protocols\Bundle\RoutingInfoBundle.cs" />
+    <Compile Include="Network\IConfigurable.cs" />
+    <Compile Include="Network\IConnectable.cs" />
+    <Compile Include="Network\Node\InterfaceBuffer.cs" />
+    <Compile Include="Protocols\Bundle\BundleInstance.cs" />
+    <Compile Include="Data\DataDestination.cs" />
+    <Compile Include="Protocols\Routing\StaticRoutingProtocol.cs" />
+    <Compile Include="Protocols\Routing\RoutingProtocol.cs" />
+    <Compile Include="Data\DataSource.cs" />
+    <Compile Include="Network\Link\LinkProtocol.cs" />
+    <Compile Include="Network\Link\LtpLinkProtocol.cs" />
+    <Compile Include="Network\Link\TcpLinkProtocol.cs" />
+    <Compile Include="Network\Link\UdpLinkProtocol.cs" />
+    <Compile Include="XmlParser.cs" />
+    <Compile Include="Network\Identificable.cs" />
+    <Compile Include="Protocols\Bundle\Bundle.cs" />
+    <Compile Include="Network\Link\LinkSide.cs" />
+    <Compile Include="Network\Link\Link.cs" />
+    <Compile Include="Network\Network.cs" />
+    <Compile Include="Logger.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Dtn.cs" />
+    <Compile Include="Network\Node\Node.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RandomGenerators\CyclicRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\ExpotentialRandomGenertor.cs" />
+    <Compile Include="RandomGenerators\ConstantRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\GaussianRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\InfinityRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\LinearRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\MultipleRandomGenerator.cs" />
+    <Compile Include="RandomGenerators\RandomGenerator.cs" />
+    <Compile Include="RandomGenerators\RepeatLastGenerator.cs" />
+    <Compile Include="Statistics\SimpleGatherer.cs" />
+    <Compile Include="Statistics\ExcelGatherer.cs" />
+    <Compile Include="Statistics\Gatherer.cs" />
+    <Compile Include="Statistics\StatisticsGenerator.cs" />
+    <Compile Include="Statistics\Statistics.cs" />
+    <Compile Include="Timer.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="C5, Version=1.1.0.0, Culture=neutral, PublicKeyToken=06a1b38866503b69, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\C5.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+</Project>

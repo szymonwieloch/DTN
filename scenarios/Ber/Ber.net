@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network>
+
+<Node Identificator="Destination"  >
+	<RoutingProtocol Type="Gradient" >
+	</RoutingProtocol>
+</Node>
+
+<Node Identificator="Source"  >
+	<DataSource>
+		<DataGenerator Type="Constant" Value="20000" />
+		<TimeGenerator Type="Constant" Value="1" />
+		<Destinations>
+			<Destination Probability="1" Identificator="Destination" />
+		</Destinations>
+	</DataSource>
+	<RoutingProtocol Type="Gradient"  >
+	</RoutingProtocol>
+</Node>
+
+<Node Identificator="Node1"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node2"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node3"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node4"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node5"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node6"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node7"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node8"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Node Identificator="Node9"  >
+	<RoutingProtocol Type="Gradient"  />
+</Node>
+
+<Link Identificator="Link1" From="Source" To="Node1" Speed="10000" Type="Ltp" Ber="0,000005"    >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link2" From="Node1" To="Node2" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link3" From="Node2" To="Node3" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link4" From="Node3" To="Node4" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link5" From="Node4" To="Node5" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link6" From="Node5" To="Node6" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link7" From="Node6" To="Node7" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link8" From="Node7" To="Node8" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link9" From="Node8" To="Node9" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+<Link Identificator="Link10" From="Node9" To="Destination" Speed="10000" Type="Ltp" Ber="0,000005"     >
+	<DelayGenerator Type="Constant" Value="0,001" />
+</Link>
+
+</Network>
+

@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network>
+
+	<Node Identificator="Node1"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node2"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node3"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node4"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node5"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node6"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node7" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node7"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node8" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Node Identificator="Node8"  >
+		<DataSource>
+			<DataGenerator Type="Expotential" Expected="80000" />
+			<TimeGenerator Type="Expotential" Expected="1" />
+			<Destinations>
+				<Destination Probability="1" Identificator="Node1" />
+				<Destination Probability="1" Identificator="Node2" />
+				<Destination Probability="1" Identificator="Node3" />
+				<Destination Probability="1" Identificator="Node4" />
+				<Destination Probability="1" Identificator="Node5" />
+				<Destination Probability="1" Identificator="Node6" />
+				<Destination Probability="1" Identificator="Node7" />
+			</Destinations>
+		</DataSource>
+		<RoutingProtocol Type="Predictable" />
+	</Node>
+	
+	<Link Identificator="Link12" From="Node1" To="Node2" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link23" From="Node2" To="Node3" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link34" From="Node3" To="Node4" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link14" From="Node1" To="Node4" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link15" From="Node1" To="Node5" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link26" From="Node2" To="Node6" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link37" From="Node3" To="Node7" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link48" From="Node4" To="Node8" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link56" From="Node5" To="Node6" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link67" From="Node6" To="Node7" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link78" From="Node7" To="Node8" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+	
+	<Link Identificator="Link58" From="Node5" To="Node8" Speed="100000" Type="Tcp" >
+		<DelayGenerator Type="Constant" Value="0,001" />
+		<BreakGenerator Type="Expotential" Expected="1000" />
+		<RepairGenerator Type="Expotential" Expected="10" />
+	</Link>
+
+</Network>
+

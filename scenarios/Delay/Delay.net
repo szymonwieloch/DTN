@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Network>
+
+<Node Identificator="Destination"  >
+	<RoutingProtocol Type="Static" DefaultLink="Link" >
+	</RoutingProtocol>
+</Node>
+
+<Node Identificator="Source"  >
+	<DataSource>
+		<DataGenerator Type="Constant" Value="100000" />
+		<TimeGenerator Type="Constant" Value="1" />
+		<Destinations>
+			<Destination Probability="1" Identificator="Destination" />
+		</Destinations>
+	</DataSource>
+	<RoutingProtocol Type="Static" DefaultLink="Link" >
+	</RoutingProtocol>
+</Node>
+
+<Link Identificator="Link" From="Source" To="Destination" Speed="100000"  Type="Ltp" >
+	<DelayGenerator Type="Constant" Value="10" />
+</Link>
+
+</Network>
+

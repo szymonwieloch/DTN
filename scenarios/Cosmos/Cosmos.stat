@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Statistics>
+
+	<Gatherer  Type="Excel"  FileName="Cosmos.txt" >
+		<RandomGenerator Type="Constant"  Value="50000000" />
+		<StatisticsGenerators All="Yes" >
+			<StatisticsGenerator Identificator="Link/Source->Destination" All="No" >
+				<Name Value="DeliveredData" />
+				<Name Value="BundleTotalTransportDelay/Average" />
+				<Name Value="BundleTotalTransportDelay/StandardDeviationEstimator" />
+				<Name Value="BundleTotalTransportDelay/Count" />
+			</StatisticsGenerator >
+		</StatisticsGenerators>
+	</Gatherer>
+</Statistics>

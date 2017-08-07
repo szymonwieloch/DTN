@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Statistics>
+
+	<Gatherer  Type="Simple"  FileName="DelaySimple.txt" >
+		<RandomGenerator Type="Constant"  Value="100000" />
+		<StatisticsGenerators All="No" >
+			<StatisticsGenerator Identificator="Link/Source->Destination" All="No"  >
+				<Name Value="BundleTotalTransportDelay/Average" />
+				<Name Value="BundleTotalTransportDelay/StandardDeviationEstimator" />
+				<Name Value="BundleTotalTransportDelay/Count" />
+				<Name Value="DeliveredData" />
+			</StatisticsGenerator>
+		</StatisticsGenerators>
+	</Gatherer>
+	
+	<Gatherer  Type="Excel"  FileName="DelayExcel.txt" >
+		<RandomGenerator Type="Constant"  Value="100000" />
+		<StatisticsGenerators All="No" >
+			<StatisticsGenerator Identificator="Link/Source->Destination" All="No" >
+				<Name Value="DeliveredData" />
+				<Name Value="BundleTransportDelay/Average" />
+				<Name Value="BundleTotalTransportDelay/Average" />
+				<Name Value="BundleTransportDelay/StandardDeviationEstimator" />
+				<Name Value="BundleTotalTransportDelay/StandardDeviationEstimator" />
+			</StatisticsGenerator >
+		</StatisticsGenerators>
+	</Gatherer>
+
+</Statistics>
